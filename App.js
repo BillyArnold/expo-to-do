@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import "react-native-gesture-handler";
+import { StatusBar } from "expo-status-bar";
+import { Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View className="flex bg-black justify-center items-center h-screen grow">
+      <View className="p-8 bg-white shadow-lg rounded-lg">
+        <Text className="text-sky-800 font-bold">This is a card</Text>
+      </View>
+
+      <View
+        className="
+        w-full 
+        h-40
+        fixed 
+        bottom-0
+        left-0 
+        bg-white
+        shadow-lg
+        rounded-tl-lg 
+        rounded-tr-lg
+        text-center
+        p-6
+      "
+      >
+        <Text className="text-sky-800 font-bold">Drawer</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
